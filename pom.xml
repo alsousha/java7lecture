@@ -54,6 +54,43 @@
                             <goal>report</goal>
                         </goals>
                     </execution>
+                    <execution>
+                        <!--id(придумываемсами)-->
+                        <id>check</id>
+                        <goals>
+                            <!--какую цель выполняем(берём из справки)-->
+                            <goal>check</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+<!--                                <rule>-->
+<!--                                    <element>BUNDLE</element>-->
+<!--                                    <limits>-->
+<!--                                        <limit>-->
+<!--                                            <counter>INSTRUCTION</counter>-->
+<!--                                            <value>COVEREDRATIO</value>-->
+<!--                                            <minimum>0.80</minimum>-->
+<!--                                        </limit>-->
+<!--                                    </limits>-->
+<!--                                </rule>-->
+
+                                    <rule>
+                                        <element>CLASS</element>
+                                        <excludes>
+                                            <exclude>*Test</exclude>
+                                        </excludes>
+                                        <limits>
+                                            <limit>
+                                                <counter>LINE</counter>
+                                                <value>COVEREDRATIO</value>
+                                                <minimum>100%</minimum>
+                                            </limit>
+                                        </limits>
+                                    </rule>
+
+                            </rules>
+                        </configuration>
+                    </execution>
                 </executions>
 
             </plugin>
