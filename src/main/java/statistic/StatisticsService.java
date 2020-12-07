@@ -1,4 +1,4 @@
-
+package statistic;
 
 public class StatisticsService {
     /**
